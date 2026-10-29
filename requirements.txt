@@ -1,0 +1,9 @@
+# Runtime dependencies for the AI-safety red-teaming pipeline.
+# Everything else used by the repo (csv, json, re, ast, os, time) is Python stdlib.
+
+# OpenRouter API calls (pipeline.call) — targets, judge, evaluator
+requests>=2.32
+
+# Local uncensored "attacker" model (pipeline.lama). Requires a running Ollama
+# server + a pulled model. Swap out lama() if you don't use Ollama (see README).
+ollama>=0.4
